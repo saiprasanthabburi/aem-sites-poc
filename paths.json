@@ -1,8 +1,10 @@
 {
   "mappings": [
-    "/content/aem-boilerplate/:/"
+    "/content/ralphlaurencorporate/:/",
+    "/content/ralphlaurencorporate/configuration:/.helix/config.json",
+    "/content/ralphlaurencorporate/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/aem-boilerplate/"
+    "/content/ralphlaurencorporate/"
   ]
 }
