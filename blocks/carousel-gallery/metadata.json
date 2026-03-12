@@ -1,0 +1,41 @@
+{
+  "variantName": "carousel-gallery",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-03-12T06:58:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://careers.ralphlauren.com/",
+    "originPage": "Ralph Lauren Careers Homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "image-gallery",
+    "imagePattern": "large",
+    "structure": "image-slides"
+  },
+  "contentPattern": {
+    "structure": "image-slides",
+    "buttonCount": 0,
+    "imageCount": 5
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "image galleries",
+      "employee photo carousels",
+      "lifestyle image slideshows",
+      "visual storytelling sections"
+    ],
+    "notSuitableFor": [
+      "video carousels",
+      "product showcases with text",
+      "content-heavy slides"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-12T06:58:00.000Z"
+  }
+}

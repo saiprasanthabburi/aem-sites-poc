@@ -1,0 +1,40 @@
+{
+  "variantName": "hero-careers",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-03-12T06:58:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://careers.ralphlauren.com/",
+    "originPage": "Ralph Lauren Careers Homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "careers-hero",
+    "imagePattern": "large",
+    "structure": "background-image + heading + quote + signature-image"
+  },
+  "contentPattern": {
+    "structure": "background-image + heading + quote + signature-image",
+    "buttonCount": 0,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "careers pages with banner images",
+      "landing pages with dark hero backgrounds",
+      "pages with heading overlaid on imagery"
+    ],
+    "notSuitableFor": [
+      "minimal text-only heroes",
+      "product pages",
+      "light background heroes"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-12T06:58:00.000Z"
+  }
+}

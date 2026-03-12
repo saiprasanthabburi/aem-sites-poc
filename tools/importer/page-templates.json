@@ -1,0 +1,109 @@
+{
+  "templates": [
+    {
+      "name": "careers-homepage",
+      "urls": [
+        "https://careers.ralphlauren.com/"
+      ],
+      "description": "Ralph Lauren Careers homepage with hero, job search, and career information sections",
+      "blocks": [
+        {
+          "name": "hero-careers",
+          "instances": [
+            "header.mainHeader .headerBanner"
+          ]
+        },
+        {
+          "name": "embed-video",
+          "instances": [
+            ".slider.with-info-text .bxslider iframe",
+            ".videosLinks iframe[src*='vimeo']"
+          ]
+        },
+        {
+          "name": "carousel-gallery",
+          "instances": [
+            ".slider.vertical--content .bxsliderVertical"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "hero",
+          "name": "Hero Banner",
+          "selector": "header.mainHeader .headerBanner",
+          "style": "dark",
+          "blocks": ["hero-careers"],
+          "defaultContent": []
+        },
+        {
+          "id": "pattern-of-success",
+          "name": "Our Pattern of Success",
+          "selector": "main > .no--border.content--static-info.ta-center:first-of-type",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".pageTitle.pageTitleAlt1.sections-title",
+            ".localTitle.no--border",
+            ".items--buttons",
+            "img[alt='Home']"
+          ]
+        },
+        {
+          "id": "explore-lifeatrl",
+          "name": "Explore #LifeAtRL",
+          "selector": ["main > .no--border.content--static-info.ta-center:nth-of-type(2)"],
+          "style": null,
+          "blocks": ["embed-video"],
+          "defaultContent": [
+            ".pageTitle.pageTitleAlt1.ta-center",
+            ".localTitle.no--border.ta-center"
+          ]
+        },
+        {
+          "id": "career-story",
+          "name": "Your Career Story Starts Here",
+          "selector": ".section__line-separator ~ h4.pageTitle.font-size24",
+          "style": null,
+          "blocks": ["carousel-gallery"],
+          "defaultContent": [
+            "h4.pageTitle.font-size24",
+            ".localTitle.no--border"
+          ]
+        },
+        {
+          "id": "benefits",
+          "name": "So Much More Than a Job",
+          "selector": "h4.pageTitle.font-size24:nth-of-type(2)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "h4.pageTitle.font-size24",
+            ".localTitle.no--border",
+            "a[href*='Benefits']"
+          ]
+        },
+        {
+          "id": "explore-world",
+          "name": "Explore The World of Ralph Lauren",
+          "selector": "h3.pageTitle.pageTitleAlt1.sections-title:last-of-type",
+          "style": null,
+          "blocks": ["embed-video"],
+          "defaultContent": [
+            "h3.pageTitle.pageTitleAlt1",
+            ".localTitle.no--border",
+            ".content--section-info .items--buttons a.saveButton"
+          ]
+        },
+        {
+          "id": "footer",
+          "name": "Footer",
+          "selector": "footer.mainFooter",
+          "style": "dark",
+          "blocks": [],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

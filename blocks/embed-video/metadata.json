@@ -1,0 +1,40 @@
+{
+  "variantName": "embed-video",
+  "baseBlock": "embed",
+  "version": "1.0.0",
+  "created": "2026-03-12T06:58:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://careers.ralphlauren.com/",
+    "originPage": "Ralph Lauren Careers Homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "video-embed",
+    "imagePattern": "noimg",
+    "structure": "video-url"
+  },
+  "contentPattern": {
+    "structure": "video-url",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "YouTube video embeds",
+      "Vimeo video embeds",
+      "pages with video content",
+      "employee story videos"
+    ],
+    "notSuitableFor": [
+      "social media embeds",
+      "interactive widget embeds"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-12T06:58:00.000Z"
+  }
+}

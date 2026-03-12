@@ -1,0 +1,9 @@
+{
+  "type": "xwalk",
+  "contentHostUrl": "author-p35055-e1966368.adobeaemcloud.com",
+  "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
+  "aemSitePath": "/content/ralphlaurencorporate",
+  "aemAssetsFolderPath": "/content/dam/ralphlaurencorporate",
+  "aemSiteName": "ralphlaurencorporate",
+  "aemSiteTitle": "Ralph Lauren Corporate"
+}
