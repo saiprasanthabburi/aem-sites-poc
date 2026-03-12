@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://careers.ralphlauren.com/",
+  "path": "index",
+  "timestamp": "2026-03-12T07:59:40.306Z",
+  "title": "External Careers - Corporate",
+  "template": "careers-homepage",
+  "blocks": [
+    "hero-careers",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "embed-video",
+    "carousel-gallery"
+  ]
+}
