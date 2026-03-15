@@ -20,8 +20,8 @@
   --link-hover-color: #000;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'Gotham Book', arial, helvetica, sans-serif;
+  --heading-font-family: georgia, 'Times New Roman', serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -74,10 +74,10 @@ body {
   display: none;
   margin: 0;
   background-color: var(--background-color);
-  color: var(--text-color);
+  color: #404040;
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 body.appear {
@@ -107,7 +107,7 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.25;
   scroll-margin: 40px;
 }
@@ -171,18 +171,20 @@ button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
-  margin: 12px 0;
-  border: 2px solid transparent;
+  margin: 6px 4px;
+  border: 2px solid #000;
   border-radius: 0;
-  padding: 0.5em 1.2em;
+  padding: 11px 21px;
   font-family: var(--body-font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 14px;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -232,8 +234,12 @@ main > .section {
   margin: 40px 0;
 }
 
+main > .section > .default-content-wrapper {
+  text-align: center;
+}
+
 main > .section > div {
-  max-width: 1200px;
+  max-width: 980px;
   margin: auto;
   padding: 0 24px;
 }
