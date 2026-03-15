@@ -29,7 +29,12 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  min-height: min(50vw, calc(100dvh - var(--header-height)));
+  min-height: min(50vw, calc(100dvh - var(--nav-height)));
+}
+
+.carousel-gallery .carousel-gallery-slide .carousel-gallery-slide-image {
+  position: absolute;
+  inset: 0;
 }
 
 .carousel-gallery .carousel-gallery-slide:has(.carousel-gallery-slide-content[data-align='center']) {
