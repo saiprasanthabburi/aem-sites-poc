@@ -72,6 +72,26 @@ function buildAutoBlocks() {
 }
 
 /**
+ * Decorates paragraphs that contain multiple links as button groups.
+ * Standard decorateButtons only handles single-link paragraphs.
+ * @param {Element} element The container element
+ */
+function decorateButtonGroups(element) {
+  element.querySelectorAll('p').forEach((p) => {
+    const links = [...p.children].filter((child) => child.tagName === 'A');
+    const nonLinkChildren = [...p.children].filter((child) => child.tagName !== 'A');
+    if (links.length > 1 && nonLinkChildren.length === 0) {
+      links.forEach((a) => {
+        if (!a.querySelector('img') && a.href !== a.textContent) {
+          a.classList.add('button');
+        }
+      });
+      p.classList.add('button-container');
+    }
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -79,6 +99,7 @@ function buildAutoBlocks() {
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
+  decorateButtonGroups(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
