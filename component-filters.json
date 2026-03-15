@@ -18,7 +18,8 @@
       "columns",
       "fragment",
       "embed-video",
-      "carousel-gallery"
+      "carousel-gallery",
+      "video-carousel"
     ]
   },
   {
@@ -46,6 +47,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "video-carousel",
+    "components": [
+      "video-carousel-item"
     ]
   }
 ]
