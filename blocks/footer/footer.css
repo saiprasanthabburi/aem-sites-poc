@@ -1,6 +1,6 @@
 footer {
-  background-color: #d1d1d1;
-  color: #041e3a;
+  background-color: var(--light-color);
+  color: var(--text-color);
   font-size: var(--body-font-size-xs);
 }
 
@@ -15,7 +15,7 @@ footer .footer p {
 }
 
 footer .footer a:any-link {
-  color: #041e3a;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -38,7 +38,7 @@ footer .footer ul {
 }
 
 /* Two-column layout for visit/follow section */
-footer .footer > div:last-child .default-content-wrapper {
+footer .footer .section:last-child .default-content-wrapper {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
@@ -49,7 +49,7 @@ footer .footer > div:last-child .default-content-wrapper {
     padding: 40px 32px 24px;
   }
 
-  footer .footer > div:last-child .default-content-wrapper {
+  footer .footer .section:last-child .default-content-wrapper {
     gap: 80px;
   }
 }

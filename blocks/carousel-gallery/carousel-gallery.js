@@ -76,8 +76,21 @@ function createSlide(row, slideIndex, carouselId) {
   slide.setAttribute('id', `carousel-gallery-${carouselId}-slide-${slideIndex}`);
   slide.classList.add('carousel-gallery-slide');
 
-  row.querySelectorAll(':scope > div').forEach((column, colIdx) => {
-    column.classList.add(`carousel-gallery-slide-${colIdx === 0 ? 'image' : 'content'}`);
+  const columns = [...row.querySelectorAll(':scope > div')];
+
+  // xwalk content has 3 columns: [item-name, image, content]
+  // standard content has 2 columns: [image, content]
+  const hasItemName = columns.length >= 3
+    || (columns.length >= 1 && !columns[0].querySelector('img, picture')
+      && columns[0].textContent.trim().match(/^[\w-]+$/));
+  const startCol = hasItemName ? 1 : 0;
+
+  columns.forEach((column, colIdx) => {
+    if (hasItemName && colIdx === 0) {
+      column.remove();
+      return;
+    }
+    column.classList.add(`carousel-gallery-slide-${colIdx === startCol ? 'image' : 'content'}`);
     slide.append(column);
   });
 
