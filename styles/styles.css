@@ -21,7 +21,7 @@
 
   /* fonts */
   --body-font-family: 'Gotham Book', arial, helvetica, sans-serif;
-  --heading-font-family: georgia, 'Times New Roman', serif;
+  --heading-font-family: didot, 'Bodoni MT', 'Book Antiqua', georgia, serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -31,10 +31,10 @@
   /* heading sizes */
   --heading-font-size-xxl: 55px;
   --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-l: 35px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 20px;
+  --heading-font-size-xs: 18px;
 
   /* nav height */
   --nav-height: 64px;
@@ -115,7 +115,13 @@ h6 {
 h1 { font-size: var(--heading-font-size-xxl); }
 h2 { font-size: var(--heading-font-size-xl); }
 h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
+
+h4 {
+  font-size: var(--heading-font-size-m);
+  font-family: var(--body-font-family);
+  text-transform: uppercase;
+}
+
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
 
