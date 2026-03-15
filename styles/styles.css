@@ -240,6 +240,19 @@ main img {
   width: 100%;
 }
 
+/* text links (e.g. "Learn more >") */
+a.text-link {
+  font-size: 16px;
+  color: #919191;
+  text-transform: none;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+a.text-link:hover {
+  color: #666;
+}
+
 /* sections */
 main > .section {
   margin: 40px 0;

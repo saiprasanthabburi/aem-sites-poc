@@ -100,6 +100,7 @@ function undecorateTextLinks(element) {
   element.querySelectorAll('a.button').forEach((a) => {
     if (a.textContent.includes('>') || a.textContent.includes('›')) {
       a.classList.remove('button', 'primary');
+      a.classList.add('text-link');
       a.parentElement?.classList.remove('button-container');
     }
   });

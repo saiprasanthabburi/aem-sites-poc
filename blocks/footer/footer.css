@@ -1,7 +1,8 @@
 footer {
   background-color: var(--light-color);
   color: var(--text-color);
-  font-size: var(--body-font-size-xs);
+  font-size: 13px;
+  line-height: 1.25;
 }
 
 footer .footer > div {
@@ -24,7 +25,8 @@ footer .footer a:hover {
 }
 
 footer .footer h4 {
-  font-size: var(--body-font-size-xs);
+  font-size: 13px;
+  font-weight: 700;
   text-transform: uppercase;
   margin: 0 0 8px;
 }
