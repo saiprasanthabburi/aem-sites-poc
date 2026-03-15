@@ -63,8 +63,8 @@
     /* heading sizes */
     --heading-font-size-xxl: 45px;
     --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
+    --heading-font-size-l: 35px;
+    --heading-font-size-m: 24px;
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
   }
@@ -109,6 +109,7 @@ h6 {
   font-family: var(--heading-font-family);
   font-weight: 400;
   line-height: 1.25;
+  color: var(--text-color);
   scroll-margin: 40px;
 }
 
