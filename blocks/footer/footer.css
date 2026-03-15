@@ -1,5 +1,6 @@
 footer {
-  background-color: var(--light-color);
+  background-color: #d1d1d1;
+  color: #041e3a;
   font-size: var(--body-font-size-xs);
 }
 
@@ -10,11 +11,45 @@ footer .footer > div {
 }
 
 footer .footer p {
+  margin: 0 0 8px;
+}
+
+footer .footer a:any-link {
+  color: #041e3a;
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  text-decoration: underline;
+}
+
+footer .footer h4 {
+  font-size: var(--body-font-size-xs);
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+footer .footer ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
+  display: flex;
+  gap: 12px;
+}
+
+/* Two-column layout for visit/follow section */
+footer .footer > div:last-child .default-content-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 @media (width >= 900px) {
   footer .footer > div {
     padding: 40px 32px 24px;
+  }
+
+  footer .footer > div:last-child .default-content-wrapper {
+    gap: 80px;
   }
 }

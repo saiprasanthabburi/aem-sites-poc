@@ -1,1 +1,3 @@
-// Hero Careers - no custom JS decoration needed (vanilla hero has no JS)
+export default function decorate() {
+  // no additional decoration needed
+}
