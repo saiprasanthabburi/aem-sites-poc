@@ -37,10 +37,12 @@ header nav[aria-expanded='true'] {
 
   header nav {
     display: flex;
-    justify-content: space-between;
-    gap: 0 32px;
+    flex-wrap: wrap;
+    align-items: center;
     max-width: 1264px;
-    padding: 0 32px;
+    padding: 0 40px;
+    gap: 0;
+    height: auto;
   }
 
   header nav[aria-expanded='true'] {
@@ -56,6 +58,7 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  text-decoration: none;
 }
 
 /* hamburger */
@@ -139,7 +142,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   }
 }
 
-/* brand */
+/* brand — row 1 left */
 header .nav-brand {
   grid-area: brand;
   flex-basis: 128px;
@@ -153,7 +156,23 @@ header nav .nav-brand img {
   height: auto;
 }
 
-/* tools */
+@media (width >= 900px) {
+  header .nav-brand {
+    flex-basis: auto;
+    flex-grow: 1;
+    padding: 20px 0;
+  }
+
+  header .nav-brand a:any-link {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+/* tools — row 1 right (secondary nav: Join Talent, Sign In) */
 header nav .nav-tools {
   grid-area: tools;
 }
@@ -171,7 +190,19 @@ header nav .nav-tools a:any-link {
   color: #bd9e72;
 }
 
-/* sections */
+@media (width >= 900px) {
+  header nav .nav-tools {
+    flex-shrink: 0;
+    padding: 20px 0;
+  }
+
+  header nav .nav-tools ul {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+/* sections — row 2 (main nav: Welcome, About Us, etc.) */
 header nav .nav-sections {
   grid-area: sections;
   flex: 1 1 auto;
@@ -192,7 +223,7 @@ header nav .nav-sections ul {
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -213,6 +244,10 @@ header nav .nav-sections ul > li > ul > li {
     display: block;
     visibility: visible;
     white-space: nowrap;
+    flex-basis: 100%;
+    order: 3;
+    border-top: 1px solid #e5e5e5;
+    padding: 16px 0;
   }
 
   header nav[aria-expanded='true'] .nav-sections {
@@ -247,7 +282,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 40px;
     margin: 0;
   }
 
@@ -286,12 +321,5 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
     padding: 8px 0;
-  }
-}
-
-@media (width >= 900px) {
-  header nav .nav-tools ul {
-    display: flex;
-    gap: 16px;
   }
 }
