@@ -178,7 +178,8 @@ button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
-  margin: 6px 4px;
+  min-width: 200px;
+  margin: 5px;
   border: 2px solid #000;
   border-radius: 0;
   padding: 11px 21px;
