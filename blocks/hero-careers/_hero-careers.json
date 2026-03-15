@@ -23,20 +23,20 @@
         {
           "component": "reference",
           "valueType": "string",
-          "name": "image",
+          "name": "bg_image",
           "label": "Image",
           "multi": false
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "imageAlt",
+          "name": "bg_imageAlt",
           "label": "Alt",
           "value": ""
         },
         {
           "component": "richtext",
-          "name": "text",
+          "name": "content_text",
           "value": "",
           "label": "Text",
           "valueType": "string"

@@ -71,12 +71,13 @@
   margin: 0 0 16px;
 }
 
-/* Signature image — keep small and inline */
-.hero-careers-content p:last-child img {
+/* Signature image — added by JS decorator */
+.hero-careers-signature {
   width: auto;
   height: auto;
   max-width: 180px;
   object-fit: contain;
+  margin-top: 8px;
 }
 
 @media (width >= 900px) {
@@ -100,7 +101,7 @@
     font-size: 22px;
   }
 
-  .hero-careers-content p:last-child img {
+  .hero-careers-signature {
     max-width: 224px;
   }
 }
