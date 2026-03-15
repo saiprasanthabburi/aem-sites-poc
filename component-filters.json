@@ -13,9 +13,12 @@
       "button",
       "title",
       "hero",
+      "hero-careers",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "embed-video",
+      "carousel-gallery"
     ]
   },
   {
