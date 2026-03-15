@@ -1,6 +1,6 @@
 footer {
-  background-color: #d1d1d1;
-  color: #041e3a;
+  background-color: var(--light-color);
+  color: var(--text-color);
   font-size: var(--body-font-size-xs);
 }
 
@@ -15,7 +15,7 @@ footer .footer p {
 }
 
 footer .footer a:any-link {
-  color: #041e3a;
+  color: var(--text-color);
   text-decoration: none;
 }
 

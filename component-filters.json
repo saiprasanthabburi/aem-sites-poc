@@ -13,9 +13,19 @@
       "button",
       "title",
       "hero",
+      "hero-careers",
       "cards",
       "columns",
+      "embed-video",
+      "video-carousel",
+      "carousel-gallery",
       "fragment"
+    ]
+  },
+  {
+    "id": "video-carousel",
+    "components": [
+      "video-carousel-item"
     ]
   },
   {
