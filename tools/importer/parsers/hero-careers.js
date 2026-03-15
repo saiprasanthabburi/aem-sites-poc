@@ -8,36 +8,32 @@
  * Generated: 2026-03-12
  */
 export default function parse(element, { document }) {
-  // Row 1: Background image (found: direct child img in .headerBanner)
-  const bgImage = element.querySelector(':scope > img');
+  // Model fields: image (reference) + imageAlt (text) → column 1, text (richtext) → column 2
+  // Block structure: 1 row, 2 columns
 
-  // Row 2: Richtext content
-  // Found: h2.headerBannerTitle, p.text-quote, span > img (signature)
+  // Column 1: image + imageAlt (grouped by "image" prefix)
+  const bgImage = element.querySelector(':scope > img');
+  const imageCol = document.createDocumentFragment();
+  if (bgImage) {
+    imageCol.appendChild(bgImage);
+  }
+
+  // Column 2: text (richtext — heading + quote + signature)
   const heading = element.querySelector('h2.headerBannerTitle, h2, h1');
   const quoteText = element.querySelector('p.text-quote, p');
   const signatureImg = element.querySelector('span > img');
 
-  const cells = [];
-
-  // Row 1: image field
-  if (bgImage) {
-    const imgFrag = document.createDocumentFragment();
-    imgFrag.appendChild(document.createComment(' field:image '));
-    imgFrag.appendChild(bgImage);
-    cells.push([imgFrag]);
-  }
-
-  // Row 2: text field (heading + quote + signature)
-  const textFrag = document.createDocumentFragment();
-  textFrag.appendChild(document.createComment(' field:text '));
-  if (heading) textFrag.appendChild(heading);
-  if (quoteText) textFrag.appendChild(quoteText);
+  const textCol = document.createDocumentFragment();
+  if (heading) textCol.appendChild(heading);
+  if (quoteText) textCol.appendChild(quoteText);
   if (signatureImg) {
     const p = document.createElement('p');
     p.appendChild(signatureImg);
-    textFrag.appendChild(p);
+    textCol.appendChild(p);
   }
-  cells.push([textFrag]);
+
+  // Single row with both columns — even if image is empty, the column must exist
+  const cells = [[imageCol, textCol]];
 
   const block = WebImporter.Blocks.createBlock(document, { name: 'hero-careers', cells });
   element.replaceWith(block);

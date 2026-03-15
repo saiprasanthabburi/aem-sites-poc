@@ -5,33 +5,88 @@
 
 .hero-careers {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  padding: 60px 24px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1a1a2e;
 }
 
-.hero-careers h1 {
+/* Row layout — collapse empty image column so text takes full width */
+.hero-careers > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--background-color);
+  width: 100%;
 }
 
-.hero-careers picture {
+/* RL signature image — keep small */
+.hero-careers > div > div p > img {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* Background image column (when present) */
+.hero-careers > div > div:first-child:has(picture) {
   position: absolute;
-  z-index: -1;
   inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  z-index: 0;
 }
 
-.hero-careers img {
+.hero-careers > div > div:first-child:has(picture) picture {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-careers > div > div:first-child:has(picture) img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
+/* Collapse empty image column so text takes full width */
+.hero-careers > div > div:first-child:empty {
+  display: none;
+}
+
+.hero-careers > div > div:first-child:empty + div {
+  grid-column: 1 / -1;
+}
+
+/* Text content */
+.hero-careers h1,
+.hero-careers h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-careers p {
+  color: #fff;
+  font-style: italic;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
 @media (width >= 900px) {
   .hero-careers {
-    padding: 40px 32px;
+    padding: 80px 32px;
+    min-height: 500px;
+  }
+
+  .hero-careers h1,
+  .hero-careers h2 {
+    font-size: 3.5rem;
+  }
+
+  .hero-careers p {
+    font-size: 1.4rem;
   }
 }

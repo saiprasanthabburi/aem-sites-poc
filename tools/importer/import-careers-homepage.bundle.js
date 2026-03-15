@@ -43,26 +43,22 @@ var CustomImportScript = (() => {
   // tools/importer/parsers/hero-careers.js
   function parse(element, { document }) {
     const bgImage = element.querySelector(":scope > img");
+    const imageCol = document.createDocumentFragment();
+    if (bgImage) {
+      imageCol.appendChild(bgImage);
+    }
     const heading = element.querySelector("h2.headerBannerTitle, h2, h1");
     const quoteText = element.querySelector("p.text-quote, p");
     const signatureImg = element.querySelector("span > img");
-    const cells = [];
-    if (bgImage) {
-      const imgFrag = document.createDocumentFragment();
-      imgFrag.appendChild(document.createComment(" field:image "));
-      imgFrag.appendChild(bgImage);
-      cells.push([imgFrag]);
-    }
-    const textFrag = document.createDocumentFragment();
-    textFrag.appendChild(document.createComment(" field:text "));
-    if (heading) textFrag.appendChild(heading);
-    if (quoteText) textFrag.appendChild(quoteText);
+    const textCol = document.createDocumentFragment();
+    if (heading) textCol.appendChild(heading);
+    if (quoteText) textCol.appendChild(quoteText);
     if (signatureImg) {
       const p = document.createElement("p");
       p.appendChild(signatureImg);
-      textFrag.appendChild(p);
+      textCol.appendChild(p);
     }
-    cells.push([textFrag]);
+    const cells = [[imageCol, textCol]];
     const block = WebImporter.Blocks.createBlock(document, { name: "hero-careers", cells });
     element.replaceWith(block);
   }

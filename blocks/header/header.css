@@ -153,6 +153,19 @@ header nav .nav-brand img {
   height: auto;
 }
 
+/* tools */
+header nav .nav-tools {
+  grid-area: tools;
+}
+
+header nav .nav-tools ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: var(--body-font-size-xs);
+}
+
 /* sections */
 header nav .nav-sections {
   grid-area: sections;
@@ -266,7 +279,9 @@ header nav .nav-sections ul > li > ul > li {
   }
 }
 
-/* tools */
-header nav .nav-tools {
-  grid-area: tools;
+@media (width >= 900px) {
+  header nav .nav-tools ul {
+    display: flex;
+    gap: 16px;
+  }
 }
