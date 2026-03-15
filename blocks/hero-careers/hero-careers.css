@@ -23,41 +23,6 @@
   width: 100%;
 }
 
-/* RL signature image — keep small */
-.hero-careers > div > div p > img {
-  width: auto;
-  height: auto;
-  max-width: 200px;
-  object-fit: contain;
-}
-
-/* Background image column (when present) */
-.hero-careers > div > div:first-child:has(picture) {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-.hero-careers > div > div:first-child:has(picture) picture {
-  position: absolute;
-  inset: 0;
-}
-
-.hero-careers > div > div:first-child:has(picture) img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-/* Collapse empty image column so text takes full width */
-.hero-careers > div > div:first-child:empty {
-  display: none;
-}
-
-.hero-careers > div > div:first-child:empty + div {
-  grid-column: 1 / -1;
-}
-
 /* Text content */
 .hero-careers h1,
 .hero-careers h2 {
@@ -73,6 +38,49 @@
   font-size: 1.2rem;
   position: relative;
   z-index: 1;
+}
+
+/* RL signature image — keep small */
+.hero-careers > div > div p > img {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* Background image column (when present) */
+.hero-careers > div > div:first-child:has(img) {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-careers > div > div:first-child:has(img) picture,
+.hero-careers > div > div:first-child:has(img) p {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+.hero-careers > div > div:first-child:has(img) img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+/* Text column spans full width when image is background */
+.hero-careers > div > div:first-child:has(img) + div {
+  grid-column: 1 / -1;
+}
+
+/* Collapse empty image column so text takes full width */
+.hero-careers > div > div:first-child:empty {
+  display: none;
+}
+
+.hero-careers > div > div:first-child:empty + div {
+  grid-column: 1 / -1;
 }
 
 @media (width >= 900px) {

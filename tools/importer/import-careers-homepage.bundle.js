@@ -42,15 +42,20 @@ var CustomImportScript = (() => {
 
   // tools/importer/parsers/hero-careers.js
   function parse(element, { document }) {
-    const bgImage = element.querySelector(":scope > img");
+    let bgImage = element.querySelector(":scope > img");
     const imageCol = document.createDocumentFragment();
-    if (bgImage) {
-      imageCol.appendChild(bgImage);
+    imageCol.appendChild(document.createComment(" field:image "));
+    if (!bgImage) {
+      bgImage = document.createElement("img");
+      bgImage.src = "https://careers.ralphlauren.com/portal/4/images/home/HomePage_Banner.jpg";
+      bgImage.alt = "Ralph Lauren Careers";
     }
+    imageCol.appendChild(bgImage);
     const heading = element.querySelector("h2.headerBannerTitle, h2, h1");
     const quoteText = element.querySelector("p.text-quote, p");
     const signatureImg = element.querySelector("span > img");
     const textCol = document.createDocumentFragment();
+    textCol.appendChild(document.createComment(" field:text "));
     if (heading) textCol.appendChild(heading);
     if (quoteText) textCol.appendChild(quoteText);
     if (signatureImg) {
