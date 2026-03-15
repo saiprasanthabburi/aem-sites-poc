@@ -1,3 +1,4 @@
+/* Hero Careers — full-width banner with background image */
 .hero-careers-container .hero-careers-wrapper {
   max-width: unset;
   padding: 0;
@@ -5,96 +6,101 @@
 
 .hero-careers {
   position: relative;
-  padding: 60px 24px;
   min-height: 400px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  background-color: #1a1a2e;
+  overflow: hidden;
 }
 
-/* Row layout — collapse empty image column so text takes full width */
+/* Row container */
 .hero-careers > div {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  min-height: 400px;
 }
 
-/* Text content */
-.hero-careers h1,
-.hero-careers h2 {
-  color: #fff;
-  font-size: 2.5rem;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-careers p {
-  color: #fff;
-  font-style: italic;
-  font-size: 1.2rem;
-  position: relative;
-  z-index: 1;
-}
-
-/* RL signature image — keep small */
-.hero-careers > div > div p > img {
-  width: auto;
-  height: auto;
-  max-width: 200px;
-  object-fit: contain;
-}
-
-/* Background image column (when present) */
-.hero-careers > div > div:first-child:has(img) {
+/* Background image column — covers entire block */
+.hero-careers-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
 
-.hero-careers > div > div:first-child:has(img) picture,
-.hero-careers > div > div:first-child:has(img) p {
+.hero-careers-bg picture {
   position: absolute;
   inset: 0;
   margin: 0;
 }
 
-.hero-careers > div > div:first-child:has(img) img {
-  object-fit: cover;
+.hero-careers-bg img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   max-width: none;
 }
 
-/* Text column spans full width when image is background */
-.hero-careers > div > div:first-child:has(img) + div {
-  grid-column: 1 / -1;
+/* Text content column — centered over background */
+.hero-careers-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 24px;
 }
 
-/* Collapse empty image column so text takes full width */
-.hero-careers > div > div:first-child:empty {
-  display: none;
+.hero-careers-content h2 {
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin: 0 0 16px;
 }
 
-.hero-careers > div > div:first-child:empty + div {
-  grid-column: 1 / -1;
+.hero-careers-content p {
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+/* Signature image — keep small and inline */
+.hero-careers-content p:last-child img {
+  width: auto;
+  height: auto;
+  max-width: 180px;
+  object-fit: contain;
 }
 
 @media (width >= 900px) {
   .hero-careers {
-    padding: 80px 32px;
-    min-height: 500px;
+    min-height: 547px;
   }
 
-  .hero-careers h1,
-  .hero-careers h2 {
-    font-size: 3.5rem;
+  .hero-careers > div {
+    min-height: 547px;
   }
 
-  .hero-careers p {
-    font-size: 1.4rem;
+  .hero-careers-content {
+    padding: 60px 32px;
+  }
+
+  .hero-careers-content h2 {
+    font-size: 45px;
+  }
+
+  .hero-careers-content p {
+    font-size: 22px;
+  }
+
+  .hero-careers-content p:last-child img {
+    max-width: 224px;
   }
 }

@@ -231,17 +231,6 @@
     ]
   },
   {
-    "id": "video-carousel-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "videoUrl",
-        "label": "Video URL"
-      }
-    ]
-  },
-  {
     "id": "fragment",
     "fields": [
       {

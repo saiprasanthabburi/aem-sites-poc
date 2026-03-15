@@ -17,14 +17,7 @@
       "cards",
       "columns",
       "fragment",
-      "hero-careers",
       "embed-video"
-    ]
-  },
-  {
-    "id": "video-carousel",
-    "components": [
-      "video-carousel-item"
     ]
   },
   {

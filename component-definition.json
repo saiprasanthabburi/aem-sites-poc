@@ -173,36 +173,6 @@
           }
         },
         {
-          "title": "Video Carousel",
-          "id": "video-carousel",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Video Carousel",
-                  "filter": "video-carousel"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Video Carousel Slide",
-          "id": "video-carousel-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Video Carousel Slide",
-                  "model": "video-carousel-item"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Fragment",
           "id": "fragment",
           "plugins": {
