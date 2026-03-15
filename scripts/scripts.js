@@ -92,6 +92,20 @@ function decorateButtonGroups(element) {
 }
 
 /**
+ * Removes button decoration from text links that contain ">".
+ * These are "Learn more >" style links, not actual buttons.
+ * @param {Element} element The container element
+ */
+function undecorateTextLinks(element) {
+  element.querySelectorAll('a.button').forEach((a) => {
+    if (a.textContent.includes('>') || a.textContent.includes('›')) {
+      a.classList.remove('button', 'primary');
+      a.parentElement?.classList.remove('button-container');
+    }
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -100,6 +114,7 @@ export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
   decorateButtonGroups(main);
+  undecorateTextLinks(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);

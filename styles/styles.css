@@ -178,7 +178,6 @@ button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
-  min-width: 200px;
   margin: 5px;
   border: 2px solid #000;
   border-radius: 0;
@@ -197,6 +196,10 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+a.button:any-link {
+  min-width: 200px;
 }
 
 a.button:hover,
