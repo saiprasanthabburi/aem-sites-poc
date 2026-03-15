@@ -38,7 +38,7 @@ footer .footer ul {
 }
 
 /* Two-column layout for visit/follow section */
-footer .footer > div:last-child .default-content-wrapper {
+footer .footer .section:last-child .default-content-wrapper {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
@@ -49,7 +49,7 @@ footer .footer > div:last-child .default-content-wrapper {
     padding: 40px 32px 24px;
   }
 
-  footer .footer > div:last-child .default-content-wrapper {
+  footer .footer .section:last-child .default-content-wrapper {
     gap: 80px;
   }
 }
