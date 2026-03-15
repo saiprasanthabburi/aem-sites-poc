@@ -163,7 +163,12 @@ header nav .nav-tools ul {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: var(--body-font-size-xs);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+header nav .nav-tools a:any-link {
+  color: #bd9e72;
 }
 
 /* sections */
@@ -183,11 +188,16 @@ header nav[aria-expanded='true'] .nav-sections {
 header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
-  font-size: var(--body-font-size-s);
+  font-size: 13px;
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+header nav .nav-sections ul > li a:any-link {
+  color: #474747;
 }
 
 header nav .nav-sections ul > li > ul {
