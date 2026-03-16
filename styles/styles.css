@@ -288,7 +288,7 @@ main .section.highlight {
 
 /* Start Your Career Story CTA banner */
 main > .section:has(#start-your-career-story) {
-  background: url('https://careers.ralphlauren.com/portal/4/images/banner.png') center / cover no-repeat;
+  background: url('https://careers.ralphlauren.com/portal/4/images/banner.png') 0% 0% / cover no-repeat;
   min-height: 547px;
   display: flex;
   align-items: center;
