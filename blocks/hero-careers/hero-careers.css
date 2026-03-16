@@ -13,14 +13,7 @@
   overflow: hidden;
 }
 
-/* Row container */
-.hero-careers > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 400px;
-}
+/* Direct children after JS flattening are bg + content cells */
 
 /* Background image column — covers entire block */
 .hero-careers-bg {
@@ -82,10 +75,6 @@
 
 @media (width >= 900px) {
   .hero-careers {
-    min-height: 547px;
-  }
-
-  .hero-careers > div {
     min-height: 547px;
   }
 
