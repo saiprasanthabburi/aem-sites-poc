@@ -1,3 +1,11 @@
+.columns {
+  margin-bottom: 90px;
+}
+
+.columns:first-of-type {
+  margin-top: 60px;
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -19,15 +27,30 @@
   display: block;
 }
 
+.columns h4 {
+  margin-bottom: 30px;
+}
+
+.columns p {
+  font-size: 16px;
+  line-height: 25px;
+  color: rgb(64 64 64);
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 24px;
   }
 
-  .columns > div > div {
+  .columns > div > .columns-img-col {
+    width: 465px;
+    flex: 0 0 465px;
+  }
+
+  .columns > div > div:not(.columns-img-col) {
     flex: 1;
     order: unset;
+    padding-left: 25px;
   }
 }
