@@ -285,3 +285,31 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* Start Your Career Story CTA banner */
+main > .section:has(#start-your-career-story) {
+  background: url('https://careers.ralphlauren.com/portal/4/images/banner.png') center / cover no-repeat;
+  min-height: 547px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+main > .section:has(#start-your-career-story) h2 {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 300;
+}
+
+main > .section:has(#start-your-career-story) a.button:any-link {
+  background-color: #fff;
+  color: rgb(3 30 58);
+  border-color: #fff;
+}
+
+main > .section:has(#start-your-career-story) a.button:hover {
+  background-color: rgb(3 30 58);
+  color: #fff;
+  border-color: rgb(3 30 58);
+}
