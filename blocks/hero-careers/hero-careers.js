@@ -21,7 +21,7 @@ export default function decorate(block) {
     // Add the RL signature image only when hero has a quote (em element)
     if (contentCell.querySelector('em')) {
       const sig = document.createElement('img');
-      sig.src = './RL_signature.png';
+      sig.src = 'https://careers.ralphlauren.com/portal/4/images/home/RL_signature.png';
       sig.alt = 'Ralph Lauren Signature';
       sig.width = 224;
       sig.height = 48;
